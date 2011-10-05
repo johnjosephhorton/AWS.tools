@@ -5,7 +5,7 @@ Introduction
 :Date: October 5, 2011
 :Authors: Whit Armstrong
 :Contact: armstrong.whit@gmail.com
-:Web site: http://github.com/armstrtw/rzmq
+:Web site: http://github.com/armstrtw/AWS.tools
 :License: GPL-3
 
 
