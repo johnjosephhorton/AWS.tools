@@ -9,7 +9,7 @@
   If unspecified all your instances will be returned.
 }
 \usage{
-ec2din(instance = NULL, filters = NULL, verbose = TRUE)
+ec2din(instance = NULL, filters = NULL, verbose = FALSE)
 }
 \arguments{
   \item{instance}{the instanceID to describe}
@@ -25,7 +25,7 @@ Whit Armstrong
 }
 \examples{\dontrun{
 library(aws.tools)
-cl <- startCluster(ami="ami-a531fccc",key="my-ec2-key",instance.count=10,instance.type="t1.micro",verbose=TRUE)
+cl <- startCluster(ami="ami-a531fccc",key="my-ec2-key",instance.count=10,instance.type="t1.micro",verbose=FALSE)
 ec2din()
 stopCluster(cl)
 }}

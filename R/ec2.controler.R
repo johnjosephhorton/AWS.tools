@@ -15,7 +15,7 @@
 ## along with this program.  If not, see <http:##www.gnu.org#licenses#>. ##
 ###########################################################################
 
-instances.from.reservation <- function(reservation.id,verbose=TRUE) {
+instances.from.reservation <- function(reservation.id,verbose=FALSE) {
     res <- ec2din(filters=paste("reservation-id",reservation.id,sep="="),verbose=verbose)
     instances <- res[grep("^INSTANCE",res)]
     instances.to.dataframe(instances)
@@ -28,7 +28,7 @@ pending.instance <- function(reservation.id) {
     any(instances[,"InstanceState"]=="pending" || instances[,"PublicDNS"] == "(nil)")
 }
 
-sleep.while.pending <- function(reservation.id,sleep.time=1,verbose=TRUE) {
+sleep.while.pending <- function(reservation.id,sleep.time=1,verbose=FALSE) {
     while(pending.instance(reservation.id)) {
         if(verbose) { cat(".") }
         Sys.sleep(sleep.time)
@@ -36,7 +36,7 @@ sleep.while.pending <- function(reservation.id,sleep.time=1,verbose=TRUE) {
     if(verbose) { cat("\n") }
 }
 
-startCluster <- function(ami,key,instance.count,instance.type,verbose=TRUE) {
+startCluster <- function(ami,key,instance.count,instance.type,verbose=FALSE) {
     cmd <- paste("ec2-run-instances",
                  ami,
                  "--show-empty-fields",
@@ -77,7 +77,7 @@ get.instances.from.cluster <- function(cluster) {
     cluster[["instances"]][,"InstanceID"]
 }
 
-ec2din <- function(instance=NULL,filters=NULL,verbose=TRUE) {
+ec2din <- function(instance=NULL,filters=NULL,verbose=FALSE) {
     aws.cmd <- paste("ec2-describe-instances",
                      ifelse(instance,instance,""),
                      "--show-empty-fields",

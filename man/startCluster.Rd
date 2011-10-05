@@ -7,7 +7,7 @@
   Start a group of instances which serve as a compute cluster.
 }
 \usage{
-startCluster(ami, key, instance.count, instance.type, verbose = TRUE)
+startCluster(ami, key, instance.count, instance.type, verbose = FALSE)
 }
 \arguments{
   \item{ami}{machine-id}
@@ -27,7 +27,7 @@ startCluster(ami, key, instance.count, instance.type, verbose = TRUE)
 }
 \examples{\dontrun{
 library(aws.tools)
-cl <- startCluster(ami="ami-a531fccc",key="my-ec2-key",instance.count=10,instance.type="t1.micro",verbose=TRUE)
+cl <- startCluster(ami="ami-a531fccc",key="my-ec2-key",instance.count=10,instance.type="t1.micro",verbose=FALSE)
 stopCluster(cl)
 }}
 \keyword{utilities}
