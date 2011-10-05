@@ -42,7 +42,6 @@ Whit Armstrong
 %%  ~~further notes~~
 }
 
-%% ~Make other sections like Warning with \section{Warning }{....} ~
 
 \seealso{
 %% ~~objects to See Also as \code{\link{help}}, ~~~
