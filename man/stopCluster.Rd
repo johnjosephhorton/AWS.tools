@@ -1,13 +1,15 @@
 \name{stopCluster}
 \alias{stopCluster}
+\alias{terminateCluster}
 \title{
-  Stop instances in a cluster.
+  Stop or terminate instances in a cluster.
 }
 \description{
-  Stop the machine instances in a cluster object.
+  Stop or terminate the machine instances in a cluster object.
 }
 \usage{
 stopCluster(cluster)
+terminateCluster(cluster)
 }
 \arguments{
   \item{cluster}{a cluster object describing the reservationID and

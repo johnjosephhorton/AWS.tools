@@ -1,13 +1,15 @@
 \name{ec2stop.reservation}
 \alias{ec2stop.reservation}
+\alias{ec2terminate.reservation}
 \title{
-  Stop all the instances in a reservation.
+  Stop or terminate all the instances in a reservation.
 }
 \description{
-  Stop all the instances in a reservation.
+  Stop or terminate all the instances in a reservation.
 }
 \usage{
 ec2stop.reservation(reservation.id)
+ec2terminate.reservation(reservation.id)
 }
 \arguments{
   \item{reservation.id}{the reservation.id to be stopped.}

@@ -1,10 +1,13 @@
 export(
        startCluster,
        get.master,
-       stopCluster,
        ec2din,
-       ec2stop.instance,
+       ec2stop.instances,
+       ec2terminate.instances,
+       stopCluster,
+       terminateCluster,
        ec2stop.reservation,
+       ec2terminate.reservation
        s3.mb,
        s3.rb,
        s3.ls,

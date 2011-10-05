@@ -96,11 +96,26 @@ ec2stop.instances <- function(instance.ids) {
     do.call(rbind,strsplit(res,"\t"))
 }
 
+ec2terminate.instances <- function(instance.ids) {
+    cmd <- paste("ec2-terminate-instances",paste(instance.ids,collapse=" "))
+    res <- system(cmd,intern=TRUE)
+    do.call(rbind,strsplit(res,"\t"))
+}
+
 stopCluster <- function(cluster) {
     ec2stop.instances(get.instances.from.cluster(cluster))
+}
+
+terminateCluster <- function(cluster) {
+    ec2terminate.instances(get.instances.from.cluster(cluster))
 }
 
 ec2stop.reservation <- function(reservation.id) {
     instances <- instances.from.reservation(reservation.id)
     ec2stop.instances(instances[,"InstanceID"])
+}
+
+ec2terminate.reservation <- function(reservation.id) {
+    instances <- instances.from.reservation(reservation.id)
+    ec2terminate.instances(instances[,"InstanceID"])
 }
