@@ -34,7 +34,7 @@ A minimal example of borrowed from JD Long::
 	library(rzmq)
 	
 	
-	cl <- start.cluster(ami="ami-a531fccc",key="my-key",instance.count=4,instance.type="m1.large")
+	cl <- startCluster(ami="ami-a531fccc",key="my-key",instance.count=4,instance.type="m1.large")
 	master.node <- get.master(cl)
 	
 	estimatePi <- function(seed) {
