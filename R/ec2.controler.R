@@ -17,7 +17,7 @@
 
 instances.from.reservation <- function(reservation.id,verbose=TRUE) {
     res <- ec2din(filters=paste("reservation-id",reservation.id,sep="="),verbose=verbose)
-    instances <- res[grep("^INSTANCE",res),]
+    instances <- res[grep("^INSTANCE",res)]
     instances.to.dataframe(instances)
 }
 
@@ -61,8 +61,10 @@ get.master <- function(cluster) {
     if(class(cluster) != "ec2.cluster") {
         stop("need class of type: ec2.cluster.")
     }
-
-    cluster[which.min(as.integer(cluster[,"AMILaunchIndex"])),]
+    instances <- cluster[["instances"]]
+    ans <- as.list(instances[which.min(as.integer(instances[,"AMILaunchIndex"])),,drop=F])
+    names(ans) <- colnames(instances)
+    ans
 }
 
 instances.to.dataframe <- function(x) {
@@ -78,7 +80,7 @@ get.instances.from.cluster <- function(cluster) {
 stopCluster <- function(cluster) {
     ans <- list()
     for(instance in get.instances.from.cluster(cluster)) {
-        ans[[instance]] <- ec2stop(instance)
+        ans[[instance]] <- ec2stop.instance(instance)
     }
     do.call(rbind,ans)
 }
@@ -86,6 +88,7 @@ stopCluster <- function(cluster) {
 ec2din <- function(instance=NULL,filters=NULL,verbose=TRUE) {
     aws.cmd <- paste("ec2-describe-instances",
                      ifelse(instance,instance,""),
+                     "--show-empty-fields",
                      ifelse(!is.null(filters),paste("--filter",filters,collapse=" "),""))
     if(verbose) {
         cat("ec2din, using this cmd:\n")
@@ -98,7 +101,7 @@ ec2din <- function(instance=NULL,filters=NULL,verbose=TRUE) {
 ec2stop.instance <- function(instance.id) {
     cmd <- paste("ec2-stop-instances",instance.id)
     res <- system(cmd,intern=TRUE)
-    res
+    do.call(rbind,strsplit(res,"\t"))
 }
 
 ec2stop.reservation <- function(reservation.id) {
