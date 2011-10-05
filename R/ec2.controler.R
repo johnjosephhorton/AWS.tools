@@ -16,9 +16,7 @@
 ###########################################################################
 
 instances.from.reservation <- function(reservation.id,verbose=TRUE) {
-    ec2din(filters=paste("reservation-id=",reservation.id,sep=""),verbose=verbose)
-
-    res <- system(cmd,intern=TRUE)
+    res <- ec2din(filters=paste("reservation-id",reservation.id,sep="="),verbose=verbose)
     instances <- res[grep("^INSTANCE",res),]
     instances.to.dataframe(instances)
 }
