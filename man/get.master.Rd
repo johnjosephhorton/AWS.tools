@@ -1,52 +1,24 @@
 \name{get.master}
 \alias{get.master}
 \title{
-%%  ~~function to do ... ~~
+  Return the master node from a cluster object.
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
+  Return the master node info from a cluster.
 }
 \usage{
 get.master(cluster)
 }
 \arguments{
-  \item{cluster}{
-%%     ~~Describe \code{cluster} here~~
-}
-}
-\details{
-%%  ~~ If necessary, more details than the description above ~~
+  \item{cluster}{a cluster object}
 }
 \value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-%% ...
+  a dataframe containing the details of the master node.
 }
 \references{
-http://docs.amazonwebservices.com/AWSEC2/latest/CommandLineReference
+  http://docs.amazonwebservices.com/AWSEC2/latest/CommandLineReference
 }
 \author{
-Whit Armstrong
-}
-}
-
-
-\seealso{
-}
-\examples{
-##---- Should be DIRECTLY executable !! ----
-##-- ==>  Define data, use random,
-##--	or do  help(data=index)  for the standard data sets.
-
-## The function is currently defined as
-function(cluster) {
-    if(class(cluster) != "ec2.cluster") {
-        stop("need class of type: ec2.cluster.")
-    }
-
-    cluster[which.min(as.integer(cluster[,"AMILaunchIndex"])),]
-  }
+  Whit Armstrong
 }
 \keyword{utilities}

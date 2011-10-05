@@ -1,13 +1,17 @@
 export(
-       instances.from.reservation,
-       pending.instance,
-       sleep.while.pending,
        startCluster,
        get.master,
-       instances.to.dataframe,
-       get.instances.from.cluster,
        stopCluster,
        ec2din,
        ec2stop.instance,
-       ec2stop.reservation
+       ec2stop.reservation,
+       s3.mb,
+       s3.rb,
+       s3.ls,
+       s3.la,
+       s3.put,
+       s3.get,
+       s3.del,
+       s3.info,
+       s3.du
        )

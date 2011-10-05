@@ -1,50 +1,25 @@
 \name{ec2stop.instance}
 \alias{ec2stop.instance}
 \title{
-%%  ~~function to do ... ~~
+  Stop selected running instances.
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
+  Stop selected running instances.
+  The INSTANCE parameter is an instance ID to stop.
 }
 \usage{
 ec2stop.instance(instance.id)
 }
 \arguments{
-  \item{instance.id}{
-%%     ~~Describe \code{instance.id} here~~
-}
-}
-\details{
-%%  ~~ If necessary, more details than the description above ~~
+  \item{instance.id}{the instance to stop}
 }
 \value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-%% ...
+  a vector describing the termination status of the instance.
 }
 \references{
 http://docs.amazonwebservices.com/AWSEC2/latest/CommandLineReference
 }
 \author{
 Whit Armstrong
-}
-}
-
-
-\seealso{
-}
-\examples{
-##---- Should be DIRECTLY executable !! ----
-##-- ==>  Define data, use random,
-##--	or do  help(data=index)  for the standard data sets.
-
-## The function is currently defined as
-function(instance.id) {
-    cmd <- paste("ec2-stop-instances",instance.id)
-    res <- system(cmd,intern=TRUE)
-    res
-  }
 }
 \keyword{utilities}
