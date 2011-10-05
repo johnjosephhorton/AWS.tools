@@ -30,7 +30,7 @@ ec2din(filters = NULL, verbose = TRUE)
 %% ...
 }
 \references{
-%% ~put references to the literature/web site here ~
+http://docs.amazonwebservices.com/AWSEC2/latest/CommandLineReference
 }
 \author{
 Whit Armstrong

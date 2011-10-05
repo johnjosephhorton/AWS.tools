@@ -30,7 +30,7 @@ instances.from.reservation(reservation.id, verbose = TRUE)
 %% ...
 }
 \references{
-%% ~put references to the literature/web site here ~
+http://docs.amazonwebservices.com/AWSEC2/latest/CommandLineReference
 }
 \author{
 Whit Armstrong

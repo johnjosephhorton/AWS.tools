@@ -42,7 +42,7 @@ s3.del(bucket, bucket.location = "US", human.readable.sizes = TRUE, list.md5 = F
 %% ...
 }
 \references{
-%% ~put references to the literature/web site here ~
+http://docs.amazonwebservices.com/AWSEC2/latest/CommandLineReference
 }
 \author{
 Whit Armstrong
@@ -122,7 +122,7 @@ s3.du(bucket, bucket.location = "US", human.readable.sizes = TRUE, list.md5 = FA
 %% ...
 }
 \references{
-%% ~put references to the literature/web site here ~
+http://docs.amazonwebservices.com/AWSEC2/latest/CommandLineReference
 }
 \author{
 Whit Armstrong
@@ -196,7 +196,7 @@ s3.get(bucket, bucket.location = "US", verbose = FALSE, debug = FALSE)
 %% ...
 }
 \references{
-%% ~put references to the literature/web site here ~
+http://docs.amazonwebservices.com/AWSEC2/latest/CommandLineReference
 }
 \author{
 Whit Armstrong
@@ -279,7 +279,7 @@ s3.info(bucket, bucket.location = "US", human.readable.sizes = TRUE, list.md5 = 
 %% ...
 }
 \references{
-%% ~put references to the literature/web site here ~
+http://docs.amazonwebservices.com/AWSEC2/latest/CommandLineReference
 }
 \author{
 Whit Armstrong
@@ -356,7 +356,7 @@ s3.la(bucket.location = "US", human.readable.sizes = TRUE, list.md5 = FALSE, ver
 %% ...
 }
 \references{
-%% ~put references to the literature/web site here ~
+http://docs.amazonwebservices.com/AWSEC2/latest/CommandLineReference
 }
 \author{
 Whit Armstrong
@@ -434,7 +434,7 @@ s3.ls(bucket = NULL, bucket.location = "US", human.readable.sizes = TRUE, list.m
 %% ...
 }
 \references{
-%% ~put references to the literature/web site here ~
+http://docs.amazonwebservices.com/AWSEC2/latest/CommandLineReference
 }
 \author{
 Whit Armstrong
@@ -510,7 +510,7 @@ s3.mb(bucket, bucket.location = "US", verbose = FALSE, debug = FALSE)
 %% ...
 }
 \references{
-%% ~put references to the literature/web site here ~
+http://docs.amazonwebservices.com/AWSEC2/latest/CommandLineReference
 }
 \author{
 Whit Armstrong
@@ -588,7 +588,7 @@ s3.put(x, bucket, bucket.location = "US", verbose = FALSE, debug = FALSE, encryp
 %% ...
 }
 \references{
-%% ~put references to the literature/web site here ~
+http://docs.amazonwebservices.com/AWSEC2/latest/CommandLineReference
 }
 \author{
 Whit Armstrong
@@ -672,7 +672,7 @@ s3.rb(bucket, recursive = FALSE, force = FALSE, bucket.location = "US", verbose 
 %% ...
 }
 \references{
-%% ~put references to the literature/web site here ~
+http://docs.amazonwebservices.com/AWSEC2/latest/CommandLineReference
 }
 \author{
 Whit Armstrong
