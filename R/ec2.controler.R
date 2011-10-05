@@ -16,7 +16,7 @@
 ###########################################################################
 
 instances.from.reservation <- function(reservation.id,verbose=TRUE) {
-    ec2din(paste("ec2din","reservation-id=",reservation.id,sep=""),verbose=verbose)
+    ec2din(filters=paste("reservation-id=",reservation.id,sep=""),verbose=verbose)
 
     res <- system(cmd,intern=TRUE)
     instances <- res[grep("^INSTANCE",res),]
@@ -85,9 +85,10 @@ stopCluster <- function(cluster) {
     do.call(rbind,ans)
 }
 
-ec2din <- function(filters=NULL,verbose=TRUE) {
+ec2din <- function(instance=NULL,filters=NULL,verbose=TRUE) {
     aws.cmd <- paste("ec2-describe-instances",
-                     paste("--filter",filters))
+                     if(instance,instance,""),
+                     if(!is.null(filters),paste("--filter",filters),""))
     if(verbose) {
         cat("ec2din, using this cmd:\n")
         print(aws.cmd)
