@@ -38,12 +38,10 @@ http://docs.amazonwebservices.com/AWSEC2/latest/CommandLineReference
 Whit Armstrong
 }
 \note{
-%%  ~~further notes~~
 }
 
 
 \seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
 ##---- Should be DIRECTLY executable !! ----
@@ -59,6 +57,4 @@ function(reservation.id,sleep.time=1,verbose=TRUE) {
     if(verbose) { cat("\n") }
   }
 }
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
 \keyword{utilities}

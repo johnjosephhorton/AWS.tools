@@ -47,12 +47,10 @@ http://docs.amazonwebservices.com/AWSEC2/latest/CommandLineReference
 Whit Armstrong
 }
 \note{
-%%  ~~further notes~~
 }
 
 
 \seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
 ##---- Should be DIRECTLY executable !! ----
@@ -74,8 +72,6 @@ function(bucket,bucket.location="US",human.readable.sizes=TRUE,list.md5=FALSE,ve
     system(s3.cmd,intern=TRUE)
   }
 }
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
 \keyword{utilities}
 \name{s3.du}
 \alias{s3.du}
@@ -126,12 +122,10 @@ http://docs.amazonwebservices.com/AWSEC2/latest/CommandLineReference
 Whit Armstrong
 }
 \note{
-%%  ~~further notes~~
 }
 
 
 \seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
 ##---- Should be DIRECTLY executable !! ----
@@ -153,8 +147,6 @@ function(bucket,bucket.location="US",human.readable.sizes=TRUE,list.md5=FALSE,ve
     system(s3.cmd,intern=TRUE)
   }
 }
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
 \keyword{utilities}
 \name{s3.get}
 \alias{s3.get}
@@ -199,12 +191,10 @@ http://docs.amazonwebservices.com/AWSEC2/latest/CommandLineReference
 Whit Armstrong
 }
 \note{
-%%  ~~further notes~~
 }
 
 
 \seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
 ##---- Should be DIRECTLY executable !! ----
@@ -229,8 +219,6 @@ function(bucket,bucket.location="US",verbose=FALSE,debug=FALSE) {
     ans
   }
 }
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
 \keyword{utilities}
 \name{s3.info}
 \alias{s3.info}
@@ -281,12 +269,10 @@ http://docs.amazonwebservices.com/AWSEC2/latest/CommandLineReference
 Whit Armstrong
 }
 \note{
-%%  ~~further notes~~
 }
 
 
 \seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
 ##---- Should be DIRECTLY executable !! ----
@@ -308,8 +294,6 @@ function(bucket,bucket.location="US",human.readable.sizes=TRUE,list.md5=FALSE,ve
     system(s3.cmd,intern=TRUE)
   }
 }
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
 \keyword{utilities}
 \name{s3.la}
 \alias{s3.la}
@@ -357,12 +341,10 @@ http://docs.amazonwebservices.com/AWSEC2/latest/CommandLineReference
 Whit Armstrong
 }
 \note{
-%%  ~~further notes~~
 }
 
 
 \seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
 ##---- Should be DIRECTLY executable !! ----
@@ -382,8 +364,6 @@ function(bucket.location="US",human.readable.sizes=TRUE,list.md5=FALSE,verbose=F
     system(s3.cmd,intern=TRUE)
   }
 }
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
 \keyword{utilities}
 \name{s3.ls}
 \alias{s3.ls}
@@ -434,12 +414,10 @@ http://docs.amazonwebservices.com/AWSEC2/latest/CommandLineReference
 Whit Armstrong
 }
 \note{
-%%  ~~further notes~~
 }
 
 
 \seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
 ##---- Should be DIRECTLY executable !! ----
@@ -463,8 +441,6 @@ function(bucket=NULL,bucket.location="US",human.readable.sizes=TRUE,list.md5=FAL
     system(s3.cmd,intern=TRUE)
   }
 }
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
 \keyword{utilities}
 \name{s3.mb}
 \alias{s3.mb}
@@ -509,12 +485,10 @@ http://docs.amazonwebservices.com/AWSEC2/latest/CommandLineReference
 Whit Armstrong
 }
 \note{
-%%  ~~further notes~~
 }
 
 
 \seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
 ##---- Should be DIRECTLY executable !! ----
@@ -534,8 +508,6 @@ function(bucket,bucket.location="US",verbose=FALSE,debug=FALSE) {
     system(s3.cmd,intern=TRUE)
   }
 }
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
 \keyword{utilities}
 \name{s3.put}
 \alias{s3.put}
@@ -586,12 +558,10 @@ http://docs.amazonwebservices.com/AWSEC2/latest/CommandLineReference
 Whit Armstrong
 }
 \note{
-%%  ~~further notes~~
 }
 
 
 \seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
 ##---- Should be DIRECTLY executable !! ----
@@ -617,8 +587,6 @@ function(x,bucket,bucket.location="US",verbose=FALSE,debug=FALSE,encrypt=FALSE) 
     res
   }
 }
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
 \keyword{utilities}
 \name{s3.rb}
 \alias{s3.rb}
@@ -669,12 +637,10 @@ http://docs.amazonwebservices.com/AWSEC2/latest/CommandLineReference
 Whit Armstrong
 }
 \note{
-%%  ~~further notes~~
 }
 
 
 \seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
 ##---- Should be DIRECTLY executable !! ----
@@ -695,6 +661,4 @@ function(bucket,recursive=FALSE,force=FALSE,bucket.location="US",verbose=FALSE,d
     system(s3.cmd,intern=TRUE)
   }
 }
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
 \keyword{utilities}

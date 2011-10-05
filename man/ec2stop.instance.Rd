@@ -32,12 +32,10 @@ http://docs.amazonwebservices.com/AWSEC2/latest/CommandLineReference
 Whit Armstrong
 }
 \note{
-%%  ~~further notes~~
 }
 
 
 \seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
 ##---- Should be DIRECTLY executable !! ----
@@ -51,6 +49,4 @@ function(instance.id) {
     res
   }
 }
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
 \keyword{utilities}
