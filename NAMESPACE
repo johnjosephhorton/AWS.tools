@@ -1,0 +1,13 @@
+export(
+       instances.from.reservation,
+       pending.instance,
+       sleep.while.pending,
+       startCluster,
+       get.master,
+       instances.to.dataframe,
+       get.instances.from.cluster,
+       stopCluster,
+       ec2din,
+       ec2stop.instance,
+       ec2stop.reservation
+       )
