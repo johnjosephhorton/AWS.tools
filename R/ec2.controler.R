@@ -77,14 +77,6 @@ get.instances.from.cluster <- function(cluster) {
     cluster[["instances"]][,"InstanceID"]
 }
 
-stopCluster <- function(cluster) {
-    ans <- list()
-    for(instance in get.instances.from.cluster(cluster)) {
-        ans[[instance]] <- ec2stop.instance(instance)
-    }
-    do.call(rbind,ans)
-}
-
 ec2din <- function(instance=NULL,filters=NULL,verbose=TRUE) {
     aws.cmd <- paste("ec2-describe-instances",
                      ifelse(instance,instance,""),
@@ -98,17 +90,17 @@ ec2din <- function(instance=NULL,filters=NULL,verbose=TRUE) {
     system(aws.cmd,intern=TRUE)
 }
 
-ec2stop.instance <- function(instance.id) {
-    cmd <- paste("ec2-stop-instances",instance.id)
+ec2stop.instances <- function(instance.ids) {
+    cmd <- paste("ec2-stop-instances",paste(instance.ids,collapse=" "))
     res <- system(cmd,intern=TRUE)
     do.call(rbind,strsplit(res,"\t"))
 }
 
+stopCluster <- function(cluster) {
+    ec2stop.instances(get.instances.from.cluster(cluster))
+}
+
 ec2stop.reservation <- function(reservation.id) {
     instances <- instances.from.reservation(reservation.id)
-    ans <- list()
-    for(inst in instances[,"InstanceID"]) {
-        ans[[inst]] <- ec2stop.instance(inst)
-    }
-    do.call(rbind,ans)
+    ec2stop.instances(instances[,"InstanceID"])
 }
