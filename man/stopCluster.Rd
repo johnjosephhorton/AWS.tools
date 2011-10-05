@@ -1,54 +1,34 @@
 \name{stopCluster}
 \alias{stopCluster}
 \title{
-%%  ~~function to do ... ~~
+  Stop instances in a cluster.
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
+  Stop the machine instances in a cluster object.
 }
 \usage{
 stopCluster(cluster)
 }
-%- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{cluster}{
-%%     ~~Describe \code{cluster} here~~
-}
-}
-\details{
-%%  ~~ If necessary, more details than the description above ~~
+  \item{cluster}{a cluster object describing the reservationID and
+    machine instances composing the cluster}
 }
 \value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-%% ...
+  a dataframe listing the termination status of the instances in the cluster.
 }
 \references{
-http://docs.amazonwebservices.com/AWSEC2/latest/CommandLineReference
+  http://docs.amazonwebservices.com/AWSEC2/latest/CommandLineReference
 }
 \author{
 Whit Armstrong
 }
-\note{
-}
 
 
 \seealso{
+  \code{\link{startCluster}}
 }
-\examples{
-##---- Should be DIRECTLY executable !! ----
-##-- ==>  Define data, use random,
-##--	or do  help(data=index)  for the standard data sets.
-
-## The function is currently defined as
-function(cluster) {
-    ans <- list()
-    for(instance in get.instances.from.cluster(cluster)) {
-        ans[[instance]] <- ec2stop(instance)
-    }
-    do.call(rbind,ans)
-  }
-}
+\examples{\dontrun{
+library(aws.tools)
+cl <- startCluster(ami="ami-a531fccc",key="my-ec2-key",instance.count=10,instance.type="t1.micro",verbose=TRUE)
+stopCluster(cl)
 \keyword{utilities}
