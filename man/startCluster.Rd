@@ -9,7 +9,6 @@
 \usage{
 startCluster(ami, key, instance.count, instance.type, verbose = TRUE)
 }
-%- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{ami}{
 %%     ~~Describe \code{ami} here~~
@@ -43,7 +42,6 @@ http://docs.amazonwebservices.com/AWSEC2/latest/CommandLineReference
 \author{
 Whit Armstrong
 }
-\note{
 }
 
 

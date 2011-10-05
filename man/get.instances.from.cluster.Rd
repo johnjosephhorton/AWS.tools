@@ -9,7 +9,6 @@
 \usage{
 get.instances.from.cluster(cluster)
 }
-%- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{cluster}{
 %%     ~~Describe \code{cluster} here~~
@@ -31,7 +30,6 @@ http://docs.amazonwebservices.com/AWSEC2/latest/CommandLineReference
 \author{
 Whit Armstrong
 }
-\note{
 }
 
 

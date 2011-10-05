@@ -9,7 +9,6 @@
 \usage{
 check.bucket(bucket)
 }
-%- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{bucket}{
 %%     ~~Describe \code{bucket} here~~
@@ -31,7 +30,6 @@ http://docs.amazonwebservices.com/AWSEC2/latest/CommandLineReference
 \author{
 Whit Armstrong
 }
-\note{
 }
 
 

@@ -9,7 +9,6 @@
 \usage{
 instances.to.dataframe(x)
 }
-%- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{x}{
 %%     ~~Describe \code{x} here~~
@@ -31,7 +30,6 @@ http://docs.amazonwebservices.com/AWSEC2/latest/CommandLineReference
 \author{
 Whit Armstrong
 }
-\note{
 }
 
 

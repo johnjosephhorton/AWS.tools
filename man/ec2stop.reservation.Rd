@@ -9,7 +9,6 @@
 \usage{
 ec2stop.reservation(reservation.id)
 }
-%- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{reservation.id}{
 %%     ~~Describe \code{reservation.id} here~~
@@ -31,7 +30,6 @@ http://docs.amazonwebservices.com/AWSEC2/latest/CommandLineReference
 \author{
 Whit Armstrong
 }
-\note{
 }
 
 

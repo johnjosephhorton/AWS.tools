@@ -9,7 +9,6 @@
 \usage{
 ec2stop.instance(instance.id)
 }
-%- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{instance.id}{
 %%     ~~Describe \code{instance.id} here~~
@@ -31,7 +30,6 @@ http://docs.amazonwebservices.com/AWSEC2/latest/CommandLineReference
 \author{
 Whit Armstrong
 }
-\note{
 }
 
 

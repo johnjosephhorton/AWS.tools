@@ -9,7 +9,6 @@
 \usage{
 s3.del(bucket, bucket.location = "US", human.readable.sizes = TRUE, list.md5 = FALSE, verbose = FALSE, debug = FALSE)
 }
-%- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{bucket}{
 %%     ~~Describe \code{bucket} here~~
@@ -46,7 +45,6 @@ http://docs.amazonwebservices.com/AWSEC2/latest/CommandLineReference
 \author{
 Whit Armstrong
 }
-\note{
 }
 
 
@@ -84,7 +82,6 @@ function(bucket,bucket.location="US",human.readable.sizes=TRUE,list.md5=FALSE,ve
 \usage{
 s3.du(bucket, bucket.location = "US", human.readable.sizes = TRUE, list.md5 = FALSE, verbose = FALSE, debug = FALSE)
 }
-%- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{bucket}{
 %%     ~~Describe \code{bucket} here~~
@@ -121,7 +118,6 @@ http://docs.amazonwebservices.com/AWSEC2/latest/CommandLineReference
 \author{
 Whit Armstrong
 }
-\note{
 }
 
 
@@ -159,7 +155,6 @@ function(bucket,bucket.location="US",human.readable.sizes=TRUE,list.md5=FALSE,ve
 \usage{
 s3.get(bucket, bucket.location = "US", verbose = FALSE, debug = FALSE)
 }
-%- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{bucket}{
 %%     ~~Describe \code{bucket} here~~
@@ -190,7 +185,6 @@ http://docs.amazonwebservices.com/AWSEC2/latest/CommandLineReference
 \author{
 Whit Armstrong
 }
-\note{
 }
 
 
@@ -231,7 +225,6 @@ function(bucket,bucket.location="US",verbose=FALSE,debug=FALSE) {
 \usage{
 s3.info(bucket, bucket.location = "US", human.readable.sizes = TRUE, list.md5 = FALSE, verbose = FALSE, debug = FALSE)
 }
-%- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{bucket}{
 %%     ~~Describe \code{bucket} here~~
@@ -268,7 +261,6 @@ http://docs.amazonwebservices.com/AWSEC2/latest/CommandLineReference
 \author{
 Whit Armstrong
 }
-\note{
 }
 
 
@@ -306,7 +298,6 @@ function(bucket,bucket.location="US",human.readable.sizes=TRUE,list.md5=FALSE,ve
 \usage{
 s3.la(bucket.location = "US", human.readable.sizes = TRUE, list.md5 = FALSE, verbose = FALSE, debug = FALSE)
 }
-%- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{bucket.location}{
 %%     ~~Describe \code{bucket.location} here~~
@@ -340,7 +331,6 @@ http://docs.amazonwebservices.com/AWSEC2/latest/CommandLineReference
 \author{
 Whit Armstrong
 }
-\note{
 }
 
 
@@ -376,7 +366,6 @@ function(bucket.location="US",human.readable.sizes=TRUE,list.md5=FALSE,verbose=F
 \usage{
 s3.ls(bucket = NULL, bucket.location = "US", human.readable.sizes = TRUE, list.md5 = FALSE, verbose = FALSE, debug = FALSE)
 }
-%- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{bucket}{
 %%     ~~Describe \code{bucket} here~~
@@ -413,7 +402,6 @@ http://docs.amazonwebservices.com/AWSEC2/latest/CommandLineReference
 \author{
 Whit Armstrong
 }
-\note{
 }
 
 
@@ -453,7 +441,6 @@ function(bucket=NULL,bucket.location="US",human.readable.sizes=TRUE,list.md5=FAL
 \usage{
 s3.mb(bucket, bucket.location = "US", verbose = FALSE, debug = FALSE)
 }
-%- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{bucket}{
 %%     ~~Describe \code{bucket} here~~
@@ -484,7 +471,6 @@ http://docs.amazonwebservices.com/AWSEC2/latest/CommandLineReference
 \author{
 Whit Armstrong
 }
-\note{
 }
 
 
@@ -520,7 +506,6 @@ function(bucket,bucket.location="US",verbose=FALSE,debug=FALSE) {
 \usage{
 s3.put(x, bucket, bucket.location = "US", verbose = FALSE, debug = FALSE, encrypt = FALSE)
 }
-%- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{x}{
 %%     ~~Describe \code{x} here~~
@@ -557,7 +542,6 @@ http://docs.amazonwebservices.com/AWSEC2/latest/CommandLineReference
 \author{
 Whit Armstrong
 }
-\note{
 }
 
 
@@ -599,7 +583,6 @@ function(x,bucket,bucket.location="US",verbose=FALSE,debug=FALSE,encrypt=FALSE) 
 \usage{
 s3.rb(bucket, recursive = FALSE, force = FALSE, bucket.location = "US", verbose = FALSE, debug = FALSE)
 }
-%- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{bucket}{
 %%     ~~Describe \code{bucket} here~~
@@ -636,7 +619,6 @@ http://docs.amazonwebservices.com/AWSEC2/latest/CommandLineReference
 \author{
 Whit Armstrong
 }
-\note{
 }
 
 

@@ -9,7 +9,6 @@
 \usage{
 ec2din(filters = NULL, verbose = TRUE)
 }
-%- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{filters}{
 %%     ~~Describe \code{filters} here~~
@@ -34,7 +33,6 @@ http://docs.amazonwebservices.com/AWSEC2/latest/CommandLineReference
 \author{
 Whit Armstrong
 }
-\note{
 }
 
 
