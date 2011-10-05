@@ -13,7 +13,7 @@ get.master(cluster)
   \item{cluster}{a cluster object}
 }
 \value{
-  a dataframe containing the details of the master node.
+  a list containing the details of the master node.
 }
 \references{
   http://docs.amazonwebservices.com/AWSEC2/latest/CommandLineReference
