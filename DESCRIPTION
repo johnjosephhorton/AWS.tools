@@ -1,9 +1,9 @@
 Package: aws.tools 
-Title: R package to use ec2 and s3 commands
+Title: R package to use Amazon Web Services
 Version: 0.0.2
 Maintainer: Whit Armstrong <armstrong.whit@gmail.com>
 Author: Whit Armstrong <armstrong.whit@gmail.com>
-Description: R package for Amazon EC2/S3
+Description: R package for Amazon Web Services EC2/S3
 License: GPL-3
 URL: http://github.com/armstrtw/aws.tools
 BugReports: http://github.com/armstrtw/aws.tools/issues

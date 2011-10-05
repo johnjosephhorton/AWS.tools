@@ -7,7 +7,7 @@ export(
        stopCluster,
        terminateCluster,
        ec2stop.reservation,
-       ec2terminate.reservation
+       ec2terminate.reservation,
        s3.mb,
        s3.rb,
        s3.ls,

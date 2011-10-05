@@ -1,5 +1,6 @@
 \name{ec2stop.instances}
 \alias{ec2stop.instances}
+\alias{ec2terminate.instances}
 \title{
   Stop selected running instances.
 }
@@ -9,9 +10,10 @@
 }
 \usage{
 ec2stop.instances(instance.ids)
+ec2terminate.instances(instance.ids)
 }
 \arguments{
-  \item{instance.id}{the instances to stop}
+  \item{instance.ids}{the instances to stop}
 }
 \value{
   a vector describing the termination status of the instances.
