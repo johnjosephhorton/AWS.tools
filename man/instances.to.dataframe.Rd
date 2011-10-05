@@ -1,6 +1,5 @@
 \name{instances.to.dataframe}
 \alias{instances.to.dataframe}
-%- Also NEED an '\alias' for EACH other topic documented here.
 \title{
 %%  ~~function to do ... ~~
 }

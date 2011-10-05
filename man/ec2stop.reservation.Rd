@@ -1,6 +1,5 @@
 \name{ec2stop.reservation}
 \alias{ec2stop.reservation}
-%- Also NEED an '\alias' for EACH other topic documented here.
 \title{
 %%  ~~function to do ... ~~
 }

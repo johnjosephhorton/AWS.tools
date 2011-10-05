@@ -1,6 +1,5 @@
 \name{check.bucket}
 \alias{check.bucket}
-%- Also NEED an '\alias' for EACH other topic documented here.
 \title{
 %%  ~~function to do ... ~~
 }

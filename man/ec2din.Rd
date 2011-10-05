@@ -1,6 +1,5 @@
 \name{ec2din}
 \alias{ec2din}
-%- Also NEED an '\alias' for EACH other topic documented here.
 \title{
 %%  ~~function to do ... ~~
 }

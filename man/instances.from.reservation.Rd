@@ -1,6 +1,5 @@
 \name{instances.from.reservation}
 \alias{instances.from.reservation}
-%- Also NEED an '\alias' for EACH other topic documented here.
 \title{
 %%  ~~function to do ... ~~
 }

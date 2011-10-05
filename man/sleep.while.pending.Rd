@@ -1,6 +1,5 @@
 \name{sleep.while.pending}
 \alias{sleep.while.pending}
-%- Also NEED an '\alias' for EACH other topic documented here.
 \title{
 %%  ~~function to do ... ~~
 }

@@ -1,6 +1,5 @@
 \name{s3.del}
 \alias{s3.del}
-%- Also NEED an '\alias' for EACH other topic documented here.
 \title{
 %%  ~~function to do ... ~~
 }
@@ -80,7 +79,6 @@ function(bucket,bucket.location="US",human.readable.sizes=TRUE,list.md5=FALSE,ve
 \keyword{utilities}
 \name{s3.du}
 \alias{s3.du}
-%- Also NEED an '\alias' for EACH other topic documented here.
 \title{
 %%  ~~function to do ... ~~
 }
@@ -160,7 +158,6 @@ function(bucket,bucket.location="US",human.readable.sizes=TRUE,list.md5=FALSE,ve
 \keyword{utilities}
 \name{s3.get}
 \alias{s3.get}
-%- Also NEED an '\alias' for EACH other topic documented here.
 \title{
 %%  ~~function to do ... ~~
 }
@@ -237,7 +234,6 @@ function(bucket,bucket.location="US",verbose=FALSE,debug=FALSE) {
 \keyword{utilities}
 \name{s3.info}
 \alias{s3.info}
-%- Also NEED an '\alias' for EACH other topic documented here.
 \title{
 %%  ~~function to do ... ~~
 }
@@ -317,7 +313,6 @@ function(bucket,bucket.location="US",human.readable.sizes=TRUE,list.md5=FALSE,ve
 \keyword{utilities}
 \name{s3.la}
 \alias{s3.la}
-%- Also NEED an '\alias' for EACH other topic documented here.
 \title{
 %%  ~~function to do ... ~~
 }
@@ -392,7 +387,6 @@ function(bucket.location="US",human.readable.sizes=TRUE,list.md5=FALSE,verbose=F
 \keyword{utilities}
 \name{s3.ls}
 \alias{s3.ls}
-%- Also NEED an '\alias' for EACH other topic documented here.
 \title{
 %%  ~~function to do ... ~~
 }
@@ -474,7 +468,6 @@ function(bucket=NULL,bucket.location="US",human.readable.sizes=TRUE,list.md5=FAL
 \keyword{utilities}
 \name{s3.mb}
 \alias{s3.mb}
-%- Also NEED an '\alias' for EACH other topic documented here.
 \title{
 %%  ~~function to do ... ~~
 }
@@ -546,7 +539,6 @@ function(bucket,bucket.location="US",verbose=FALSE,debug=FALSE) {
 \keyword{utilities}
 \name{s3.put}
 \alias{s3.put}
-%- Also NEED an '\alias' for EACH other topic documented here.
 \title{
 %%  ~~function to do ... ~~
 }
@@ -630,7 +622,6 @@ function(x,bucket,bucket.location="US",verbose=FALSE,debug=FALSE,encrypt=FALSE) 
 \keyword{utilities}
 \name{s3.rb}
 \alias{s3.rb}
-%- Also NEED an '\alias' for EACH other topic documented here.
 \title{
 %%  ~~function to do ... ~~
 }

@@ -1,6 +1,5 @@
 \name{ec2stop.instance}
 \alias{ec2stop.instance}
-%- Also NEED an '\alias' for EACH other topic documented here.
 \title{
 %%  ~~function to do ... ~~
 }
