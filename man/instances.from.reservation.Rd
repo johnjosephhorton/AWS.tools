@@ -33,7 +33,7 @@ instances.from.reservation(reservation.id, verbose = TRUE)
 %% ~put references to the literature/web site here ~
 }
 \author{
-%%  ~~who you are~~
+Whit Armstrong
 }
 \note{
 %%  ~~further notes~~

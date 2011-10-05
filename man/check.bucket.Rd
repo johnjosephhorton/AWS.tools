@@ -30,7 +30,7 @@ check.bucket(bucket)
 %% ~put references to the literature/web site here ~
 }
 \author{
-%%  ~~who you are~~
+Whit Armstrong
 }
 \note{
 %%  ~~further notes~~

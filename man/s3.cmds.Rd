@@ -45,7 +45,7 @@ s3.del(bucket, bucket.location = "US", human.readable.sizes = TRUE, list.md5 = F
 %% ~put references to the literature/web site here ~
 }
 \author{
-%%  ~~who you are~~
+Whit Armstrong
 }
 \note{
 %%  ~~further notes~~
@@ -126,7 +126,7 @@ s3.du(bucket, bucket.location = "US", human.readable.sizes = TRUE, list.md5 = FA
 %% ~put references to the literature/web site here ~
 }
 \author{
-%%  ~~who you are~~
+Whit Armstrong
 }
 \note{
 %%  ~~further notes~~
@@ -201,7 +201,7 @@ s3.get(bucket, bucket.location = "US", verbose = FALSE, debug = FALSE)
 %% ~put references to the literature/web site here ~
 }
 \author{
-%%  ~~who you are~~
+Whit Armstrong
 }
 \note{
 %%  ~~further notes~~
@@ -285,7 +285,7 @@ s3.info(bucket, bucket.location = "US", human.readable.sizes = TRUE, list.md5 = 
 %% ~put references to the literature/web site here ~
 }
 \author{
-%%  ~~who you are~~
+Whit Armstrong
 }
 \note{
 %%  ~~further notes~~
@@ -363,7 +363,7 @@ s3.la(bucket.location = "US", human.readable.sizes = TRUE, list.md5 = FALSE, ver
 %% ~put references to the literature/web site here ~
 }
 \author{
-%%  ~~who you are~~
+Whit Armstrong
 }
 \note{
 %%  ~~further notes~~
@@ -442,7 +442,7 @@ s3.ls(bucket = NULL, bucket.location = "US", human.readable.sizes = TRUE, list.m
 %% ~put references to the literature/web site here ~
 }
 \author{
-%%  ~~who you are~~
+Whit Armstrong
 }
 \note{
 %%  ~~further notes~~
@@ -519,7 +519,7 @@ s3.mb(bucket, bucket.location = "US", verbose = FALSE, debug = FALSE)
 %% ~put references to the literature/web site here ~
 }
 \author{
-%%  ~~who you are~~
+Whit Armstrong
 }
 \note{
 %%  ~~further notes~~
@@ -598,7 +598,7 @@ s3.put(x, bucket, bucket.location = "US", verbose = FALSE, debug = FALSE, encryp
 %% ~put references to the literature/web site here ~
 }
 \author{
-%%  ~~who you are~~
+Whit Armstrong
 }
 \note{
 %%  ~~further notes~~
@@ -683,7 +683,7 @@ s3.rb(bucket, recursive = FALSE, force = FALSE, bucket.location = "US", verbose 
 %% ~put references to the literature/web site here ~
 }
 \author{
-%%  ~~who you are~~
+Whit Armstrong
 }
 \note{
 %%  ~~further notes~~

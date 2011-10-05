@@ -36,7 +36,7 @@ sleep.while.pending(reservation.id, sleep.time = 1, verbose = TRUE)
 %% ~put references to the literature/web site here ~
 }
 \author{
-%%  ~~who you are~~
+Whit Armstrong
 }
 \note{
 %%  ~~further notes~~

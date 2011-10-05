@@ -33,7 +33,7 @@ ec2din(filters = NULL, verbose = TRUE)
 %% ~put references to the literature/web site here ~
 }
 \author{
-%%  ~~who you are~~
+Whit Armstrong
 }
 \note{
 %%  ~~further notes~~
