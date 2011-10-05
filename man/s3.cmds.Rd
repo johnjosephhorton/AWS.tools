@@ -78,8 +78,7 @@ function(bucket,bucket.location="US",human.readable.sizes=TRUE,list.md5=FALSE,ve
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
-\keyword{ ~kwd1 }
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line
+\keyword{utilities}
 \name{s3.du}
 \alias{s3.du}
 %- Also NEED an '\alias' for EACH other topic documented here.
@@ -160,8 +159,7 @@ function(bucket,bucket.location="US",human.readable.sizes=TRUE,list.md5=FALSE,ve
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
-\keyword{ ~kwd1 }
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line
+\keyword{utilities}
 \name{s3.get}
 \alias{s3.get}
 %- Also NEED an '\alias' for EACH other topic documented here.
@@ -239,8 +237,7 @@ function(bucket,bucket.location="US",verbose=FALSE,debug=FALSE) {
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
-\keyword{ ~kwd1 }
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line
+\keyword{utilities}
 \name{s3.info}
 \alias{s3.info}
 %- Also NEED an '\alias' for EACH other topic documented here.
@@ -321,8 +318,7 @@ function(bucket,bucket.location="US",human.readable.sizes=TRUE,list.md5=FALSE,ve
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
-\keyword{ ~kwd1 }
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line
+\keyword{utilities}
 \name{s3.la}
 \alias{s3.la}
 %- Also NEED an '\alias' for EACH other topic documented here.
@@ -398,8 +394,7 @@ function(bucket.location="US",human.readable.sizes=TRUE,list.md5=FALSE,verbose=F
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
-\keyword{ ~kwd1 }
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line
+\keyword{utilities}
 \name{s3.ls}
 \alias{s3.ls}
 %- Also NEED an '\alias' for EACH other topic documented here.
@@ -482,8 +477,7 @@ function(bucket=NULL,bucket.location="US",human.readable.sizes=TRUE,list.md5=FAL
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
-\keyword{ ~kwd1 }
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line
+\keyword{utilities}
 \name{s3.mb}
 \alias{s3.mb}
 %- Also NEED an '\alias' for EACH other topic documented here.
@@ -556,8 +550,7 @@ function(bucket,bucket.location="US",verbose=FALSE,debug=FALSE) {
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
-\keyword{ ~kwd1 }
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line
+\keyword{utilities}
 \name{s3.put}
 \alias{s3.put}
 %- Also NEED an '\alias' for EACH other topic documented here.
@@ -642,8 +635,7 @@ function(x,bucket,bucket.location="US",verbose=FALSE,debug=FALSE,encrypt=FALSE) 
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
-\keyword{ ~kwd1 }
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line
+\keyword{utilities}
 \name{s3.rb}
 \alias{s3.rb}
 %- Also NEED an '\alias' for EACH other topic documented here.
@@ -723,5 +715,4 @@ function(bucket,recursive=FALSE,force=FALSE,bucket.location="US",verbose=FALSE,d
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
-\keyword{ ~kwd1 }
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line
+\keyword{utilities}
