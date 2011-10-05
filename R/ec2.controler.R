@@ -94,7 +94,7 @@ ec2din <- function(instance=NULL,filters=NULL,verbose=TRUE) {
         print(aws.cmd)
     }
 
-    system(aws.cmd,inern=TRUE)
+    system(aws.cmd,intern=TRUE)
 }
 
 ec2stop.instance <- function(instance.id) {
