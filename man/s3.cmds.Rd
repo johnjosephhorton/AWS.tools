@@ -15,15 +15,36 @@
   Run most of the commands available in s3cmd.
 }
 \usage{
-s3.mb(bucket, bucket.location = "US", verbose = FALSE, debug = FALSE)
-s3.rb(bucket, recursive = FALSE, force = FALSE, bucket.location = "US",verbose = FALSE, debug = FALSE)
-s3.ls(bucket = NULL, bucket.location = "US", human.readable.sizes = TRUE, list.md5 = FALSE, verbose = FALSE, debug = FALSE)
-s3.la(bucket.location = "US", human.readable.sizes = TRUE, list.md5 = FALSE, verbose = FALSE, debug = FALSE)
-s3.put(x, bucket, bucket.location = "US", verbose = FALSE, debug = FALSE, encrypt = FALSE)
-s3.get(bucket, bucket.location = "US", verbose = FALSE, debug = FALSE)
-s3.del(bucket, bucket.location = "US", human.readable.sizes = TRUE, list.md5 = FALSE, verbose = FALSE, debug = FALSE)
-s3.info(bucket, bucket.location = "US", human.readable.sizes = TRUE, list.md5 = FALSE, verbose = FALSE, debug = FALSE)
-s3.du(bucket, bucket.location = "US", human.readable.sizes = TRUE, list.md5 = FALSE, verbose = FALSE, debug = FALSE)
+s3.mb(bucket, bucket.location = "US", verbose = FALSE,
+      debug = FALSE)
+
+s3.rb(bucket, recursive = FALSE, force = FALSE,
+      bucket.location = "US", verbose = FALSE, debug = FALSE)
+
+s3.ls(bucket = NULL, bucket.location = "US",
+      human.readable.sizes = TRUE,
+      list.md5 = FALSE, verbose = FALSE, debug = FALSE)
+
+s3.la(bucket.location = "US", human.readable.sizes = TRUE,
+      list.md5 = FALSE, verbose = FALSE, debug = FALSE)
+
+s3.put(x, bucket, bucket.location = "US", verbose = FALSE,
+       debug = FALSE, encrypt = FALSE)
+
+s3.get(bucket, bucket.location = "US", verbose = FALSE,
+       debug = FALSE)
+
+s3.del(bucket, bucket.location = "US",
+       human.readable.sizes = TRUE,list.md5 = FALSE,
+       verbose = FALSE, debug = FALSE)
+
+s3.info(bucket, bucket.location = "US",
+        human.readable.sizes = TRUE, list.md5 = FALSE,
+        verbose = FALSE, debug = FALSE)
+
+s3.du(bucket, bucket.location = "US",
+      human.readable.sizes = TRUE, list.md5 = FALSE,
+      verbose = FALSE, debug = FALSE)
 }
 \arguments{
   \item{x}{an R object to upload.}

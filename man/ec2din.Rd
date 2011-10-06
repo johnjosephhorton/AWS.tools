@@ -23,9 +23,16 @@ http://docs.amazonwebservices.com/AWSEC2/latest/CommandLineReference
 \author{
 Whit Armstrong
 }
-\examples{\dontrun{
+\examples{
+\dontrun{
 library(aws.tools)
-cl <- startCluster(ami="ami-a531fccc",key="my-ec2-key",instance.count=10,instance.type="t1.micro",verbose=FALSE)
+
+cl <- startCluster(ami="ami-a531fccc",
+                   key="my-ec2-key",
+                   instance.count=10,
+                   instance.type="t1.micro",
+                   verbose=FALSE)
+
 ec2din()
 stopCluster(cl)
 }}
