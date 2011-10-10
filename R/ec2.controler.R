@@ -28,7 +28,7 @@ pending.instance <- function(reservation.id) {
     any(instances[,"InstanceState"]=="pending" || instances[,"PublicDNS"] == "(nil)")
 }
 
-sleep.while.pending <- function(reservation.id,sleep.time=1,verbose=FALSE) {
+sleep.while.pending <- function(reservation.id,sleep.time=1,verbose=TRUE) {
     while(pending.instance(reservation.id)) {
         if(verbose) { cat(".") }
         Sys.sleep(sleep.time)
@@ -50,7 +50,7 @@ startCluster <- function(ami,key,instance.count,instance.type,verbose=FALSE) {
     }
     res <- system(cmd,intern=TRUE)
     reservation <- strsplit(res[[1]],split="\t")[[1]][-1]
-    sleep.while.pending(reservation[1])
+    sleep.while.pending(reservation[1],verbose)
     instances <- instances.from.reservation(reservation[1])
     ans <- list(reservation=reservation,instances=instances)
     class(ans) <- "ec2.cluster"
