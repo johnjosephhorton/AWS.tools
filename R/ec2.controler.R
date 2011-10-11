@@ -14,18 +14,17 @@
 ## You should have received a copy of the GNU General Public License     ##
 ## along with this program.  If not, see <http:##www.gnu.org#licenses#>. ##
 ###########################################################################
+require(XML)
 
 instances.from.reservation <- function(reservation.id,verbose=FALSE) {
-    res <- ec2din(filters=paste("reservation-id",reservation.id,sep="="),verbose=verbose)
-    instances <- res[grep("^INSTANCE",res)]
-    instances.to.dataframe(instances)
+    ec2din(filters=paste("reservation-id",reservation.id,sep="="),verbose=verbose)
 }
 
 pending.instance <- function(reservation.id) {
     instances <- instances.from.reservation(reservation.id)
 
     ## test both state and public dns status
-    any(instances[,"InstanceState"]=="pending" || instances[,"PublicDNS"] == "(nil)")
+    any(instances[,"instanceState"]=="pending" || is.na(instances[,"dnsName"]))
 }
 
 sleep.while.pending <- function(reservation.id,sleep.time=1,verbose=TRUE) {
@@ -57,37 +56,59 @@ startCluster <- function(ami,key,instance.count,instance.type,verbose=FALSE) {
     ans
 }
 
-get.master <- function(cluster) {
-    if(class(cluster) != "ec2.cluster") {
-        stop("need class of type: ec2.cluster.")
+instance.xml.to.dataframe <- function(reservation.id,owner.id,x) {
+    ans <- list()
+    ans[["reservationId"]] <- reservation.id
+    ans[["ownerId"]] <- owner.id
+
+    all.nodes <- names(x)
+    nested.nodes <- c("instanceState","blockDeviceMapping","tagSet")
+
+    simple.nodes <- all.nodes[-match(nested.nodes,all.nodes)]
+    for(nm in simple.nodes) {
+        ans[[ nm ]] <- ifelse(is.null(xmlValue(x$children[[nm]])),NA,xmlValue(x$children[[nm]]))
     }
-    instances <- cluster[["instances"]]
-    ans <- as.list(instances[which.min(as.integer(instances[,"AMILaunchIndex"])),,drop=F])
-    names(ans) <- colnames(instances)
-    ans
+
+    ## why is instanceState a complex node...?
+    ans[["instanceState"]] <- xmlValue(x$children$instanceState$children$name)
+    as.data.frame(ans)
 }
 
-instances.to.dataframe <- function(x) {
-    instances <- do.call(rbind,strsplit(x,split="\t"))
-    colnames(instances) <- c("TypeIdentifier","InstanceID","AmiID","PublicDNS","PrivateDNS","InstanceState","KeyName","AMILaunchIndex","ProductCodes","InstanceType","InstanceLaunchTime","AvailabilityZone","KernelID","RAMDiskID","MonitoringState","PublicIPAddress","PrivateIPAddress","Tenancy","SubnetID","VpcID","TypeOfRootDevice","PlacementGroup","VirtualizationType","IDsOfEachSecurityGroups","Tags","HypervisorType","BlockdeviceIdentifier")
-    instances
+reservation.xml.to.dataframe <- function(x) {
+    reservation.id <- xmlValue(x$children$reservationId)
+    owner.id <- xmlValue(x$children$ownerId)
+    ans <- list()
+    for(instance in x$children$instancesSet$children) {
+        ans[[ xmlValue(instance$children$instanceId) ]] <- instance.xml.to.dataframe(reservation.id,owner.id,instance)
+    }
+    ##group.set <- xmlValue(x$children$groupSet)
+    do.call(rbind,ans)
 }
 
 get.instances.from.cluster <- function(cluster) {
     cluster[["instances"]][,"InstanceID"]
 }
 
+ec2din.format.xml <- function(x) {
+    ans <- list()
+    x.root <- xmlRoot(xmlTreeParse(paste(x,collapse=""),asText=TRUE))
+    for(reservation in x.root$children$reservationSet$children) {
+        ans[[ xmlValue(reservation$children$reservationId) ]] <- reservation.xml.to.dataframe(reservation)
+    }
+    do.call(rbind,ans)
+}
+
 ec2din <- function(instance=NULL,filters=NULL,verbose=FALSE) {
     aws.cmd <- paste("ec2-describe-instances",
                      ifelse(instance,instance,""),
-                     "--show-empty-fields",
-                     ifelse(!is.null(filters),paste("--filter",filters,collapse=" "),""))
+                     "--verbose",
+                     ifelse(!is.null(filters),paste("--filter",filters,collapse=" "),""),
+                     "|sed -n '/DescribeInstancesResponse/,/\\/DescribeInstancesResponse/p'")
     if(verbose) {
         cat("ec2din, using this cmd:\n")
         print(aws.cmd)
     }
-
-    system(aws.cmd,intern=TRUE)
+    ec2din.format.xml(system(aws.cmd,intern=TRUE))
 }
 
 ec2stop.instances <- function(instance.ids) {
