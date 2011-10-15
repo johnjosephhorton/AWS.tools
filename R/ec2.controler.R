@@ -17,17 +17,22 @@
 require(XML)
 
 instances.from.reservation <- function(reservation.id,verbose=FALSE) {
-    ec2din(filters=paste("reservation-id",reservation.id,sep="="),verbose=verbose)
+    ec2din(filters=paste("reservation-id",reservation.id,sep="="),verbose=verbose)[[reservation.id]]
 }
 
 pending.instance <- function(reservation.id) {
     instances <- instances.from.reservation(reservation.id)
 
     ## test both state and public dns status
-    any(instances[,"instanceState"]=="pending" || is.na(instances[,"dnsName"]))
+    if(any(is.na(instances[,"instanceState"]) | is.na(instances[,"dnsName"]))) {
+        ans <- TRUE
+    } else {
+        ans <- any(instances[,"instanceState"]=="pending")
+    }
+    ans
 }
 
-sleep.while.pending <- function(reservation.id,sleep.time=1,verbose=TRUE) {
+sleep.while.pending <- function(reservation.id,sleep.time=2,verbose=TRUE) {
     while(pending.instance(reservation.id)) {
         if(verbose) { cat(".") }
         Sys.sleep(sleep.time)
@@ -57,21 +62,31 @@ startCluster <- function(ami,key,instance.count,instance.type,verbose=FALSE) {
 }
 
 instance.xml.to.dataframe <- function(reservation.id,owner.id,x) {
-    ans <- list()
+    minimal.colnames <- c("reservationId","ownerId","instanceId","imageId","instanceState","privateDnsName","dnsName","reason","keyName","amiLaunchIndex","productCodes","instanceType","launchTime","placement","kernelId","monitoring","privateIpAddress","ipAddress","groupSet","architecture","rootDeviceType","rootDeviceName","virtualizationType","clientToken","hypervisor")
+    ans <- vector("list",length(minimal.colnames))
+    for(i in 1:length(ans)) { ans[[i]] <- NA }
+    names(ans) <- minimal.colnames
+
     ans[["reservationId"]] <- reservation.id
     ans[["ownerId"]] <- owner.id
 
     all.nodes <- names(x)
     nested.nodes <- c("instanceState","blockDeviceMapping","tagSet")
 
+    ## make sure these nodes exist in this aws results set
+    nested.nodes <- nested.nodes[nested.nodes %in% all.nodes]
+
     simple.nodes <- all.nodes[-match(nested.nodes,all.nodes)]
     for(nm in simple.nodes) {
-        ans[[ nm ]] <- ifelse(is.null(xmlValue(x$children[[nm]])),NA,xmlValue(x$children[[nm]]))
+        if(nm %in% minimal.colnames) {
+            ans[[ nm ]] <- ifelse(is.null(xmlValue(x$children[[nm]])),NA,xmlValue(x$children[[nm]]))
+        }
     }
 
     ## why is instanceState a complex node...?
     ans[["instanceState"]] <- xmlValue(x$children$instanceState$children$name)
-    as.data.frame(ans)
+
+    as.data.frame(ans,stringsAsFactors=FALSE)
 }
 
 reservation.xml.to.dataframe <- function(x) {
@@ -86,7 +101,7 @@ reservation.xml.to.dataframe <- function(x) {
 }
 
 get.instances.from.cluster <- function(cluster) {
-    cluster[["instances"]][,"InstanceID"]
+    cluster[["instances"]][,"instanceId"]
 }
 
 ec2din.format.xml <- function(x) {
@@ -95,7 +110,7 @@ ec2din.format.xml <- function(x) {
     for(reservation in x.root$children$reservationSet$children) {
         ans[[ xmlValue(reservation$children$reservationId) ]] <- reservation.xml.to.dataframe(reservation)
     }
-    do.call(rbind,ans)
+    ans
 }
 
 ec2din <- function(instance=NULL,filters=NULL,verbose=FALSE) {
@@ -133,10 +148,10 @@ terminateCluster <- function(cluster) {
 
 ec2stop.reservation <- function(reservation.id) {
     instances <- instances.from.reservation(reservation.id)
-    ec2stop.instances(instances[,"InstanceID"])
+    ec2stop.instances(instances[,"instanceId"])
 }
 
 ec2terminate.reservation <- function(reservation.id) {
     instances <- instances.from.reservation(reservation.id)
-    ec2terminate.instances(instances[,"InstanceID"])
+    ec2terminate.instances(instances[,"instanceId"])
 }
